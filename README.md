@@ -97,10 +97,6 @@ except APIError as exc:
   - `attachment_id` (str).
 - `delete_attachment(mailbox_id, mail_id, attachment_id)` → `None` (204).
 
-**Health**
-- `health()` → `{"ok":true}`. No auth header sent.
-- `ready()` → readiness payload. No auth header sent.
-
 ## Errors
 
 - Network/timeouts raise `TransportError`.

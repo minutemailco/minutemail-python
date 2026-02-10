@@ -242,16 +242,6 @@ class MinuteMailClient:
             ok_status=(204,),
         )
 
-    # --- Health ---
-
-    def health(self) -> Dict[str, Any]:
-        """Liveness probe."""
-        return self._request("GET", "/health", auth_required=False)
-
-    def ready(self) -> Dict[str, Any]:
-        """Readiness probe."""
-        return self._request("GET", "/ready", auth_required=False)
-
     # --- Internals ---
 
     def _request(
