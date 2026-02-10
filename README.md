@@ -12,11 +12,6 @@ Python client for the MinuteMail public API gateway (`/v1`). It handles auth hea
 pip install minutemail-sdk
 ```
 
-Or for development:
-```bash
-pip install -e .
-```
-
 Requirements: Python 3.9+ and `requests>=2.31.0`.
 
 ## Authentication
@@ -53,7 +48,7 @@ except APIError as exc:
 
 ## Client classes
 
-- `MinuteMailClient`: Production-safe surface for managing mailboxes, reading mail, and deleting data.
+- `MinuteMailClient`: Client for managing mailboxes, reading mail, and deleting data.
 
 ### Constructor parameters
 
@@ -61,7 +56,7 @@ except APIError as exc:
 - `timeout` (float, default `10.0`): Per-request timeout in seconds.
 - `session` (requests.Session, optional): Provide to reuse connections/custom adapters.
 
-### MinuteMailClient methods (production)
+### MinuteMailClient methods
 
 **Mailboxes**
 - `list_mailboxes()` → dict `{items:[...]}`; returns active mailboxes sorted by `createdAt`. Auth required.
@@ -118,9 +113,9 @@ except APIError as exc:
 - `expires_in` mirrors the API: Go-style durations like `15m`, `2h`, or integer minutes.
 - Attachments: strings are UTF-8 encoded then base64 encoded; override `size_bytes` if the decoded size is already known.
 
-## Development
+## Contributing
 
-1. Create a virtualenv and install dependencies: `pip install -e .`
-2. Run your scripts/tests using your API key.
+1. Create a virtualenv and install: `pip install -e .`
+2. Run your tests using your API key.
 
 Planned: unit tests against a mocked gateway; semantic versioning for releases.
