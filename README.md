@@ -46,6 +46,20 @@ except APIError as exc:
     print("Request failed:", exc)
 ```
 
+### Fetch messages from a mailbox
+
+```python
+# List all emails in the mailbox
+mails = client.list_mails(mailbox_id="your-mailbox-id")
+for mail in mails["items"]:
+    print(f"From: {mail['from']}, Subject: {mail['subject']}")
+
+# Get full email content
+mail = client.get_mail(mailbox_id="your-mailbox-id", mail_id="mail-id")
+print("Body:", mail["body"])
+print("Has attachments:", mail["hasAttachments"])
+```
+
 ## Client classes
 
 - `MinuteMailClient`: Client for managing mailboxes, reading mail, and deleting data.
