@@ -122,11 +122,6 @@ except APIError as exc:
     print(exc.status_code, exc.error, exc.message)
 ```
 
-## Configuration notes
-
-- `expires_in` mirrors the API: Go-style durations like `15m`, `2h`, or integer minutes.
-- Attachments: strings are UTF-8 encoded then base64 encoded; override `size_bytes` if the decoded size is already known.
-
 ## Contributing
 
 1. Create a virtualenv and install: `pip install -e .`
