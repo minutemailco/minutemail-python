@@ -1,6 +1,6 @@
 # MinuteMail Python SDK
 
-Python client for the MinuteMail public API gateway (`/v1`). It handles auth headers, request wiring, and attachment encoding so you can focus on product logic.
+Python SDK for automating temporary email workflows in testing and CI/CD environments. Create disposable mailboxes, retrieve emails programmatically, and test email-dependent features without exposing real user data.
 
 **Resources:**
 - [Official Documentation](https://docs.minutemail.co/en/sdk/getting-started/)
