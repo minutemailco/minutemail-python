@@ -58,7 +58,6 @@ except APIError as exc:
 ### Constructor parameters
 
 - `api_key` (str, required): Tenant-scoped API key used for all authenticated calls.
-- `base_url` (str, default `https://api.minutemail.co`): Gateway origin (no `/v1` suffix). Only change for local testing.
 - `timeout` (float, default `10.0`): Per-request timeout in seconds.
 - `session` (requests.Session, optional): Provide to reuse connections/custom adapters.
 
@@ -120,14 +119,12 @@ except APIError as exc:
 
 ## Configuration notes
 
-- `base_url` should be the gateway origin (no `/v1` suffix). Default: `https://api.minutemail.co`.
 - `expires_in` mirrors the API: Go-style durations like `15m`, `2h`, or integer minutes.
 - Attachments: strings are UTF-8 encoded then base64 encoded; override `size_bytes` if the decoded size is already known.
 
 ## Development
 
 1. Create a virtualenv and install dependencies: `pip install -e .`
-2. For local testing, override `base_url`: `MinuteMailClient(api_key="...", base_url="http://localhost:8080")`
-3. Run your scripts/tests using your API key.
+2. Run your scripts/tests using your API key.
 
 Planned: unit tests against a mocked gateway; semantic versioning for releases.
