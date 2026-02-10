@@ -2,6 +2,10 @@
 
 Python client for the MinuteMail public API gateway (`/v1`). It handles auth headers, request wiring, and attachment encoding so you can focus on product logic.
 
+**Resources:**
+- [Official Documentation](https://docs.minutemail.co/en/sdk/getting-started/)
+- [MinuteMail Platform](https://minutemail.co)
+
 ## Installation
 
 ```bash
