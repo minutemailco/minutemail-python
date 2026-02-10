@@ -22,10 +22,7 @@ Every authenticated call sends `Authorization: Bearer <api-key>`. Pass your tena
 ```python
 from minutemail import MinuteMailClient
 
-client = MinuteMailClient(
-    api_key="your-api-key",
-    base_url="https://api.minutemail.co",  # or http://localhost:8080 for local
-)
+client = MinuteMailClient(api_key="your-api-key")
 ```
 
 ## Usage examples
@@ -57,7 +54,7 @@ except APIError as exc:
 ### Constructor parameters
 
 - `api_key` (str, required): Tenant-scoped API key used for all authenticated calls.
-- `base_url` (str, default `https://api.minutemail.co`): Gateway origin (no `/v1` suffix).
+- `base_url` (str, default `https://api.minutemail.co`): Gateway origin (no `/v1` suffix). Only change for local testing.
 - `timeout` (float, default `10.0`): Per-request timeout in seconds.
 - `session` (requests.Session, optional): Provide to reuse connections/custom adapters.
 
@@ -126,7 +123,7 @@ except APIError as exc:
 ## Development
 
 1. Create a virtualenv and install dependencies: `pip install -e .`
-2. Point `base_url` at your running gateway (`http://localhost:8080`).
+2. For local testing, override `base_url`: `MinuteMailClient(api_key="...", base_url="http://localhost:8080")`
 3. Run your scripts/tests using your API key.
 
 Planned: unit tests against a mocked gateway; semantic versioning for releases.
