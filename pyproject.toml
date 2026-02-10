@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "minutemail-sdk"
+version = "1.0.0"
+description = "Official Python SDK for the MinuteMail API - 100% API coverage with full feature support."
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [
+  { name = "MinuteMail", email = "engineering@minutemail.cc" }
+]
+dependencies = [
+  "requests>=2.31.0",
+]
+keywords = ["email", "api", "sdk", "minutemail"]
+
+[project.urls]
+Homepage = "https://minutemail.co"
+Repository = "https://github.com/minutemailco/minutemail-python"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

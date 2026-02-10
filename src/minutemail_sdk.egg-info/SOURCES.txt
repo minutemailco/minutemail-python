@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+src/minutemail/__init__.py
+src/minutemail/client.py
+src/minutemail/errors.py
+src/minutemail_sdk.egg-info/PKG-INFO
+src/minutemail_sdk.egg-info/SOURCES.txt
+src/minutemail_sdk.egg-info/dependency_links.txt
+src/minutemail_sdk.egg-info/requires.txt
+src/minutemail_sdk.egg-info/top_level.txt
